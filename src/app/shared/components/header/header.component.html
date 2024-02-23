@@ -5,7 +5,7 @@
       <mat-icon fxLayoutAlign="start center">menu</mat-icon>
     </div>
     <div class="logo" fxLayoutAlign="start center">
-      <img (click)="gotoHome()" fxLayoutAlign="start center" src="../../../../assets/shared/desktop/logo.svg" alt="" />
+      <img (click)="gotoHome()" fxLayoutAlign="start center" src="./assets/shared/desktop/logo.svg" alt="" />
     </div>
     <nav fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="34px" fxHide.lt-md="">
       <a class="link-item subtitle" routerLinkActive="active" *ngFor="let link of linkList" [routerLink]="link.path">{{
