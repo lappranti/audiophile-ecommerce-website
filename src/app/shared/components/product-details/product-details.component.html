@@ -1,0 +1,21 @@
+<div class="container" fxLayout="row" fxLayoutAlign="space-between start" fxLayoutGap="40px" fxLayout.lt-md="column"
+  fxLayoutGap.lt-md="120px" fxLayoutGap.lt-sm="88px">
+  <div class="features" fxLayout="column" fxLayoutGap="32px" fxLayoutGap.lt-sm="24px">
+    <div class="title3">{{"features" | translate}}</div>
+    <div class="body" fxLayout="column" fxLayoutGap="24px">
+      <p *ngFor="let text of data.features">{{ text | translate }}</p>
+    </div>
+  </div>
+  <div class="includes" fxLayout="column" fxLayoutGap="32px" fxLayout.lt-md="row"
+    fxLayoutAlign.lt-md="space-between start" fxLayout.lt-sm="column" fxLayoutAlign.lt-sm="start start"
+    fxLayoutGap.lt-sm="24px">
+    <div class="title3">in the box</div>
+    <div fxLayout="column" fxLayoutGap="8px">
+      <span *ngFor="let include of data.includes" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="21px"
+        class="body">
+        <span class="text-yellow">{{ include.quantity }} x</span>
+        <span>{{ include.item }}</span>
+      </span>
+    </div>
+  </div>
+</div>

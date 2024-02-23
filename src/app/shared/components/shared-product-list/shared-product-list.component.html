@@ -1,0 +1,10 @@
+<div *ngIf="productList">
+    <app-banner [bannerTitle]="productList[0].category"></app-banner>
+    <div class="container">
+        <div class="wrapper" fxLayout="column" fxLayoutGap="160px" fxLayoutGap.lt-sm="120px">
+            <app-horizontal-card *ngFor="let product of productList" [data]="product"></app-horizontal-card>
+            <app-categories></app-categories>
+            <app-audio-gear></app-audio-gear>
+        </div>
+    </div>
+</div>

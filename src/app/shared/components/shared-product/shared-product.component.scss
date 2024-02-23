@@ -1,0 +1,50 @@
+@import "../../utils/variables";
+
+.container {
+    width: 100%;
+    padding: 160px 5% 160px;
+
+    @media only screen and (max-width: 960px) {
+        padding: 82px 5% 120px;
+
+        .btn-gb {
+            top: -54px;
+        }
+    }
+
+    @media only screen and (max-width: 600px) {
+        padding: 65px 5% 120px;
+
+        .btn-gb {
+            top: -44px;
+        }
+    }
+}
+
+.wrapper {
+    margin: 0 auto;
+    position: relative;
+
+    @media (min-width: 1440px) {
+        max-width: 1328px;
+    }
+
+    @media (min-width: 1920px) {
+        max-width: 1520px;
+    }
+}
+
+.btn-gb {
+    border: none;
+    background: transparent;
+    position: absolute;
+    left: 0;
+    top: -76px;
+    cursor: pointer;
+    color: #00000050;
+    transition: color 0.3s ease-in-out;
+
+    &:hover {
+        color: $primary-color;
+    }
+}

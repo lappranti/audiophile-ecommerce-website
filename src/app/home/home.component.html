@@ -1,0 +1,66 @@
+<div class="container">
+  <div class="baniere-home">
+    <div class="wrapper" fxLayout="row" fxLayoutAlign="space-between start" fxLayoutAlign.lt-md="center start">
+      <div class="text-container-baniere" fxLayout="column" fxLayoutAlign="center start" fxLayoutGap="24px"
+        fxLayoutGap.lt-sm="16px" fxLayoutAlign.lt-md="center center">
+        <h4 class="subtitle-baniere overline">{{"new-product" | translate}}</h4>
+        <h1 class="title-baniere title1">XX99 Mark II HeadphoneS</h1>
+        <div class="description-baniere body">
+          {{"natural-experiance" | translate}}
+        </div>
+        <a routerLink="/headphones/{{ 'xx99-mark-two-headphones' }}"
+          class="see-product-baniere btn btn--1">{{"See-Product" | translate}}</a>
+      </div>
+      <div class="cover-baniere" fxFlex.gt-sm="62%" fxFlex.lt-md fxFill></div>
+    </div>
+  </div>
+  <div class="main-content">
+    <div class="wrapper" fxLayout="column" fxLayoutGap="168px" fxLayoutGap.lt-md="96px" fxLayoutGap.lt-sm="120px">
+      <!-- all-category-container -->
+      <app-categories></app-categories>
+      <!-- products-container -->
+      <div class="products-container" fxFlex="100" fxLayout="column" fxLayoutGap="48px" fxLayoutGap.lt-md="32px"
+        fxLayoutGap.lt-sm="24px">
+        <!-- speaker-zx9 -->
+        <div fxLayout="row" fxLayoutAlign="space-evenly center" fxLayout.lt-md="column"
+          fxLayoutAlign.lt-md="start center" class="speaker-zx9">
+          <div class="image-speaker-zx9">
+            <img srcset="
+                ../../assets/home/mobile/image-speaker-zx9.png   600w,
+                ../../assets/home/tablet/image-speaker-zx9.png   960w,
+                ../../assets/home/desktop/image-speaker-zx9.png 1920w
+              " src="../../assets/home/desktop/image-speaker-zx9.png" alt="image speaker-zx9" />
+          </div>
+          <div class="description-speaker-zx9" fxFlex="31" fxLayout="column" fxLayoutGap="start start"
+            fxLayoutAlign.lt-md="end center" fxFlex.lt-md fxLayoutGap="24px">
+            <h1 class="title1" fxLayout="column" fxLayoutGap="start start" fxLayoutAlign.lt-md="start center">
+              <span>ZX9</span><span> SPEAKER</span>
+            </h1>
+            <div class="body">
+              {{"Upgrade-to-premium" | translate}}
+            </div>
+            <a routerLink="/speaker/{{ 'zx9-speaker' }}" class="btn btn--1">{{"See-Product" | translate}}</a>
+          </div>
+        </div>
+        <!-- speaker-zx7 -->
+        <div class="speaker-zx7" fxLayoutAlign="start center">
+          <div fxLayout="column" fxLayoutGap="32px">
+            <h1 class="title4">ZX7 SPEAKER</h1>
+            <a routerLink="/speaker/{{ 'zx7-speaker' }}" class="btn btn--2">{{"See-Product" | translate}}</a>
+          </div>
+        </div>
+        <!-- earphones-yx1 -->
+        <div class="earphones-yx1" fxLayout="row" fxLayoutGap="30px" fxLayoutGap.lt-md="10px" fxLayout.lt-sm="column"
+          fxLayoutGap.lt-sm="24px">
+          <div fxFlex.gt-xs="50" class="image-earphones-yx1"></div>
+          <div fxFlex.gt-xs="50" fxLayout="column" fxLayoutGap="32px" fxLayoutAlign="center start"
+            class="description-earphones-yx1">
+            <h1 class="title4">YX1 EARPHONES</h1>
+            <a routerLink="/earphones/{{ 'yx1-earphones' }}" class="btn btn--2">{{"See-Product" | translate}}</a>
+          </div>
+        </div>
+      </div>
+      <app-audio-gear></app-audio-gear>
+    </div>
+  </div>
+</div>

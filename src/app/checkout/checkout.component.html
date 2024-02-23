@@ -1,0 +1,174 @@
+<div class="container">
+  <div class="wrapper" fxLayout="column" fxLayoutGap="40" fxLayoutGap.lt-md="16px">
+    <div>
+      <button class="body go-back" (click)="goBack()">Go Back</button>
+    </div>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()" fxLayout="row" fxLayoutAlign="space-between start"
+      fxLayoutGap.gt-sm="30px" fxLayout.lt-md="row wrap">
+      <div class="checkout" fxFlex fxFlex.lt-md="100">
+        <div fxFlex="100" fxLayout="column" fxLayoutGap="40px" fxLayoutGap="32px">
+          <h3 class="title3">{{"checkout" | translate}}</h3>
+          <div fxLayout="column" fxLayoutGap="60px" fxLayoutGap.lt-sm="32px">
+            <div fxLayout="column" fxLayoutGap="52px" fxLayoutGap.lt-sm="32px">
+              <div class="block" fxLayout="column" fxLayoutGap="16px">
+                <h5 class="subtitle">{{"Billing-Details" | translate}}</h5>
+                <div fxLayout="column" fxLayoutGap="24px">
+                  <div fxLayout="row" fxLayoutGap="16px" fxLayout.lt-sm="column" fxLayoutGap.lt-sm="24px"
+                    fxFlex.lt-sm="100">
+                    <div class="form-group" fxFlex="50" fxLayout="column" fxLayoutGap="8px">
+                      <label class="label" for="Name">{{'Name' | translate}} <span
+                          class="champ-obligatoire">*</span></label>
+                      <input type="text" id="Name" formControlName="name" placeholder="Alexei Ward"
+                        autocomplete="given-name" />
+                    </div>
+                    <div class="form-group" fxFlex="50" fxLayout="column" fxLayoutGap="8px">
+                      <label class="label" for="email">{{"Email-Address" | translate}} <span
+                          class="champ-obligatoire">*</span></label>
+                      <input type="email" id="email" formControlName="email" placeholder="alexei@mail.com"
+                        autocomplete="on" />
+                    </div>
+                  </div>
+                  <div fxLayout="row" fxLayoutGap="16px" fxLayout.lt-sm="column" fxLayoutGap.lt-sm="24px"
+                    fxFlex.lt-sm="100">
+                    <div class="form-group" fxLayout="column" fxLayoutGap="8px" fxFlex="50" fxFlex.lt-sm="100">
+                      <label class="label" for="phone">{{"Phone-Number" | translate}} <span
+                          class="champ-obligatoire">*</span></label>
+                      <input type="number" id="phone" formControlName="phone" placeholder="+1 (202) 555-0136"
+                        autocomplete="off" />
+                    </div>
+                    <div fxFlex="50" fxHide.lt-sm=""></div>
+                  </div>
+                </div>
+              </div>
+              <div class="block" class="block" fxLayout="column" fxLayoutGap="16px">
+                <h5 class="subtitle">{{'shipping-info' | translate}}</h5>
+                <div fxLayout="column" fxLayoutGap="24px">
+                  <div class="form-group" fxLayout="column" fxLayoutGap="8px" fxFlex="100">
+                    <label class="label" for="add">{{'Address' | translate}} <span
+                        class="champ-obligatoire">*</span></label>
+                    <input type="text" id="add" formControlName="adress" placeholder="1137 Williams Avenue" />
+                  </div>
+                  <div fxLayout="row" fxLayoutGap="16px" fxLayout.lt-sm="column" fxLayoutGap.lt-sm="24px"
+                    fxFlex.lt-sm="100">
+                    <div class="form-group" fxFlex="50" fxLayout="column" fxLayoutGap="8px">
+                      <label class="label" for="zip-code">{{"ZIP-Code" | translate}}</label>
+                      <input type="text" id="zip-code" formControlName="zipCode" placeholder="10001" />
+                    </div>
+                    <div class="form-group" fxFlex="50" fxLayout="column" fxLayoutGap="8px">
+                      <label class="label" for="city">{{'City' | translate}} <span
+                          class="champ-obligatoire">*</span></label>
+                      <input type="text" id="city" formControlName="city" placeholder="New York" />
+                    </div>
+                  </div>
+                  <div fxLayout="row" fxLayoutGap="16px" fxLayout.lt-sm="column" fxLayoutGap.lt-sm="24px"
+                    fxFlex.lt-sm="100">
+                    <div class="form-group" fxLayout="column" fxLayoutGap="8px" fxFlex="50">
+                      <label class="label" for="contry">{{"Country"| translate}} <span
+                          class="champ-obligatoire">*</span></label>
+                      <input type="text" id="contry" formControlName="country" placeholder="United States" />
+                    </div>
+                    <div fxFlex="50" fxHide.lt-sm=""></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="block" fxLayout="column" fxLayoutGap="16px">
+              <h5 class="subtitle">{{"payment-details" |translate}}</h5>
+              <div fxLayout="column" fxLayoutGap="24px" fxLayoutGap.lt-sm="32px">
+                <div fxLayout="row" fxLayoutGap="16px" fxLayoutAlign="start none" class="block" fxLayout.lt-sm="column"
+                  fxLayoutGap.lt-sm="24px" fxFlex.lt-sm="100">
+                  <div fxFlex.gt-xs="50">
+                    <span class="label">{{'Payment-Method' |translate}} <span class="champ-obligatoire">*</span></span>
+                  </div>
+                  <div fxFlex="50" fxLayout="column" fxLayoutGap="16px">
+                    <label for="e-Money" class="radio-container" fxLayout="row" fxLayoutAlign="start center"
+                      fxLayoutGap="16px" [ngClass]="paymentMethod?.value=='e-Money'? 'selected' : ''">
+                      <input type="radio" id="e-Money" formControlName="paymentMethod" value="e-Money" />
+                      <span class="radio-placeholder" fxLayoutAlign="center cneter"></span>
+                      <span class="label">e-Money</span>
+                    </label>
+                    <label for="cash" class="radio-container" fxLayout="row" fxLayoutAlign="start center"
+                      fxLayoutGap="16px" [ngClass]="paymentMethod?.value=='cash' ? 'selected' : ''">
+                      <input type="radio" id="cash" formControlName="paymentMethod" value="cash" checked />
+                      <span class="radio-placeholder" fxLayoutAlign="center cneter"></span>
+                      <span class="label">{{"Cash-on-Delivery" |translate}}</span>
+                    </label>
+                  </div>
+                </div>
+                <div *ngIf="paymentMethod?.value=='e-Money'" class="block" fxLayout="row" fxLayoutGap="16px"
+                  fxLayout.lt-sm="column" fxLayoutGap.lt-sm="24px" fxFlex.lt-sm="100">
+                  <div class="form-group" fxFlex="50" fxLayout="column" fxLayoutGap="8px">
+                    <label class="label" for="e-money-num">e-Money Number <span
+                        class="champ-obligatoire">*</span></label>
+                    <input type="text" id="e-money-num" formControlName="eNumber" placeholder="238521993" />
+                  </div>
+                  <div class="form-group" fxFlex="50" fxLayout="column" fxLayoutGap="8px">
+                    <label class="label" for="e-money-pin">e-Money PIN <span class="champ-obligatoire">*</span></label>
+                    <input type="text" id="e-money-pin" formControlName="ePin" placeholder="6891" />
+                  </div>
+                </div>
+                <div *ngIf="paymentMethod?.value=='cash'" class="block" fxLayout="row" fxLayout.lt-sm="column"
+                  fxLayoutGap.lt-sm="16px" fxLayoutGap="32px" fxLayoutAlign="start center"
+                  fxLayoutAlign.lt-sm="none start">
+                  <div class="img-icon-cach"></div>
+                  <div class="body" fxFlex>
+                    {{"The-Cash" | translate}}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="summary" fxFlex.lt-md="100" fxLayout="column" fxLayoutGap="32px">
+        <div>
+          <h4 class="bold-text bold-text--title-summary">{{"summary" | translate}}</h4>
+        </div>
+        <div fxLayout="column" fxLayoutGap="24px">
+          <div fxLayout="row" fxLayoutAlign="space-between start" class="product" *ngFor="let prod of cartList">
+            <div fxLayout="row" fxLayoutGap="16px">
+              <div class="img-prod" [ngStyle]="{ 'background-image': 'url(' + prod.img + ')' }"></div>
+              <div fxLayout="column" fxLayoutAlign="center start">
+                <span class="body" style="font-weight: 700; color: #000">{{
+                  prod.name.split(" ")[0]
+                  }}</span>
+                <span fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="4px"><span class="prod-price">{{
+                    prod.price | number : "1.0-0"
+                    }}</span>
+                  <mat-icon fxLayoutAlign="center center">euro_symbol</mat-icon></span>
+              </div>
+            </div>
+            <div>
+              <span class="body" style="font-weight: 700">
+                {{ prod.nbr }}X
+              </span>
+            </div>
+          </div>
+        </div>
+        <div fxLayout="column" fxLayoutGap="8px">
+          <div fxLayout="row" fxLayoutGap="32px" fxLayoutAlign="space-between center">
+            <span class="body">TOTAL</span>
+            <span class="bold-text">$ {{totalPriceItem | number : "1.0-0"}}</span>
+          </div>
+          <div fxLayout="row" fxLayoutGap="32px" fxLayoutAlign="space-between center">
+            <span class="body">{{'SHIPPING' |translate}}</span>
+            <span class="bold-text">$ 50</span>
+          </div>
+          <div fxLayout="row" fxLayoutGap="32px" fxLayoutAlign="space-between center">
+            <span class="body">VAT (INCLUDED)</span>
+            <span class="bold-text">$ 35</span>
+          </div>
+        </div>
+        <div fxLayout="column" fxLayoutGap="32px">
+          <div fxLayout="row" fxLayoutGap="32px" fxLayoutAlign="space-between center">
+            <span class="body">{{"GRAND-TOTAL" | translate}}</span>
+            <span class="bold-text bold-text--grd-total">$ {{grandTotal | number : "1.0-0"}}</span>
+          </div>
+          <button type="submit" class="btn btn--1" [disabled]="form.invalid" style="width: 100%">
+            CONTINUE
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

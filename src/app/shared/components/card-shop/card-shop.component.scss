@@ -1,0 +1,47 @@
+@import "../../utils/variables";
+
+.card {
+  position: relative;
+
+  .card-image {
+    height: 160px;
+    width: 100%;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    position: absolute;
+    top: -80px;
+  }
+  .card-content {
+    padding-top: 33px;
+    padding-bottom: 16px;
+    height: 204px;
+    background: #f1f1f1;
+    border-radius: 8px;
+
+    .title {
+      color: #000;
+      text-align: center;
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 1.286px;
+      text-transform: uppercase;
+    }
+
+    @media only screen and (max-width: 400px) {
+      height: 165px;
+      // max-width: 350px;
+      // margin: 0 auto;
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+    .btn {
+      span {
+        color: $primary-color;
+      }
+    }
+  }
+}

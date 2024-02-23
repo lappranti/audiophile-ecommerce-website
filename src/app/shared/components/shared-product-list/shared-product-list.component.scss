@@ -1,0 +1,23 @@
+.container {
+    padding: 160px 5%;
+
+    @media only screen and (max-width: 960px) {
+        padding: 120px 5%;
+    }
+
+    @media only screen and (max-width: 600px) {
+        padding: 64px 5% 120px;
+    }
+}
+
+.wrapper {
+    margin: 0 auto;
+
+    @media (min-width: 1440px) {
+        max-width: 1328px;
+    }
+
+    @media (min-width: 1920px) {
+        max-width: 1520px;
+    }
+}

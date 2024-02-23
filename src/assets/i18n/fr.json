@@ -1,0 +1,72 @@
+{
+  "home": "accueil",
+  "headphones": "casques",
+  "speaker": "haut-parleurs",
+  "earphones": "écouteurs",
+  "cart": "panier",
+
+  "remove-all": "Vider",
+  "shop": "Boutique",
+  "checkout": "caisse",
+
+  "footer-description": "Audiophile est un guichet unique pour répondre à tous vos besoins audio. Nous sommes une petite équipe d'amoureux de la musique et de spécialistes du son dévoués à vous aider à tirer le meilleur parti de votre audio personnel. Venez visiter notre salle de démonstration - nous sommes ouverts 7/7.",
+  "new-product": "NOUVEAU PRODUIT",
+  "natural-experiance": "Vivez une expérience audio naturelle et réaliste, accompagnée d'une qualité de construction exceptionnelle conçue pour les passionnés de musique.",
+  "See-Product": "voir produit",
+  "Upgrade-to-premium": "Optez pour des haut-parleurs haut de gamme exceptionnellement conçus pour offrir un son véritablement remarquable.",
+  "Bringing-you-the": "Pour vous offrir le",
+
+  "best": "meilleur",
+  "audio-gear": "équipement audio",
+  "Located-at-the-heart": "Situé au cœur de la ville de New York, Audiophile est le magasin de référence pour les casques haut de gamme, les écouteurs, les enceintes et les accessoires audio. Nous disposons d'un grand showroom et de salles de démonstration de luxe où vous pouvez parcourir et découvrir une large gamme de nos produits. Passez nous voir dans notre magasin pour rencontrer quelques-unes des personnes fantastiques qui font d'Audiophile le meilleur endroit pour acheter votre équipement audio portable.",
+
+  "yx1-earphones-description": "Adaptez votre expérience d'écoute avec des haut-parleurs dynamiques sur mesure des nouveaux écouteurs sans fil YX1. Profitez d'un son incroyablement fidèle même dans des environnements bruyants grâce à sa fonction de suppression active du bruit.",
+  "xx59-headphones-description": "Profitez de votre audio presque partout et personnalisez-le selon vos goûts spécifiques avec le casque XX59. Ce casque sans fil polyvalent, élégant mais durable, est un compagnon brillant à la maison ou en déplacement.",
+  "xx99-mark-one-headphones-description": "Considéré comme la référence en matière de casques audio, le classique XX99 Mark I offre une reproduction audio détaillée et précise tant pour les audiophiles, les ingénieurs du son que pour les passionnés de musique, que ce soit en studio ou en déplacement.",
+  "xx99-mark-two-headphones-description": "Le nouveau casque XX99 Mark II représente l'apogée de l'audio pur. Il redéfinit votre expérience de casque haut de gamme en reproduisant la profondeur équilibrée et la précision du son de qualité studio.",
+  "zx7-speaker-description": "Diffusez un son de haute qualité sans fil avec un minimum, voire aucune perte. Le haut-parleur ZX7 utilise des composants audiophiles haut de gamme qui représentent le haut de gamme des enceintes alimentées pour une utilisation à domicile ou en studio.",
+  "zx9-speaker-description": "Améliorez votre système audio avec le tout nouveau haut-parleur actif ZX9. Il s'agit d'un système d'enceintes bibliothèque offrant une connectivité vraiment sans fil, ouvrant de nouvelles possibilités pour des configurations audio plus agréables et pratiques.",
+
+  "add-to-cart": "AJOUTER AU PANIER",
+  "you-may-also-like": "Vous pourriez également aimer",
+  "features": "CARACTÉRISTIQUES",
+
+  "yx1-earphones-features1": "Découvrez un son stéréo inégalé grâce à une technologie acoustique innovante. Avec une ergonomie améliorée conçue pour un port toute la journée, ces écouteurs révolutionnaires ont été finement conçus pour vous offrir un ajustement parfait, garantissant un confort total toute la journée tout en bénéficiant d'une isolation phonique exceptionnelle et d'un son vraiment immersif.",
+  "yx1-earphones-features2": "Les écouteurs sans fil YX1 disposent de commandes personnalisables pour le volume, la musique, les appels et les assistants vocaux intégrés aux deux écouteurs. La nouvelle autonomie de batterie de 7 heures peut être étendue jusqu'à 28 heures avec le boîtier de charge, vous offrant ainsi un temps de lecture ininterrompu. Un artisanat exquis avec un design résistant aux éclaboussures est désormais disponible dans un tout nouveau schéma de couleurs blanc et gris ainsi que dans le classique noir populaire.",
+
+  "xx59-headphones-features1": "Ces écouteurs ont été fabriqués à partir de matériaux durables et de haute qualité, suffisamment résistants pour être emportés partout. Son design compact pliable associe confort et style minimaliste, ce qui le rend parfait pour les voyages. Une transmission sans faille est garantie par la dernière technologie sans fil conçue pour la synchronisation audio avec les vidéos.",
+  "xx59-headphones-features2": "Plus qu'une simple paire d'écouteurs, ce casque est équipé de deux microphones intégrés pour des appels mains libres clairs lorsqu'il est associé à un smartphone compatible. Le contrôle de la musique et des appels est également intuitif grâce aux boutons tactiles facilement accessibles sur les oreillettes. Peu importe comment vous utilisez les écouteurs XX59, vous pouvez le faire toute la journée grâce à une impressionnante autonomie de batterie de 30 heures qui peut être rechargée rapidement via USB-C.",
+
+  "xx99-mark-one-headphones-features1": "Considérés comme la référence ultime en matière d'écouteurs, les XX99 Mark I démontrent plus de cinq décennies d'expertise audio, redéfinissant l'expérience d'écoute critique. Cette paire d'écouteurs fermés est fabriquée à partir de matériaux industriels de qualité aérospatiale pour mettre l'accent sur la durabilité, avec un poids relativement léger de 11 onces.",
+  "xx99-mark-one-headphones-features2": "Des coussinets d'oreille en microfibre fabriqués à la main au robuste serre-tête en métal avec élément d'amortissement interne, les composants travaillent ensemble pour offrir confort et son sans compromis. Son design fermé offre jusqu'à 27 dB de réduction passive du bruit, réduisant la résonance en renvoyant le son vers un absorbeur dédié. Pour la connectivité, un câble spécialement accordé est inclus avec un connecteur doré équilibré.",
+
+  "xx99-mark-two-headphones-feature1": "Doté d'une sangle de tête en cuir véritable et de coussinets d'oreille de qualité supérieure, ces écouteurs offrent un confort supérieur à ceux qui aiment profiter d'une écoute sans fin. Il comprend des commandes intuitives conçues pour toutes les situations. Que vous passiez un appel professionnel ou que vous soyez simplement dans votre propre espace personnel, les fonctionnalités d'allumage/arrêt automatique et de pause garantissent que vous ne manquerez jamais un battement.",
+  "xx99-mark-two-headphones-feature2": "La technologie avancée de suppression active du bruit avec égaliseur intégré vous permet de vivre votre monde audio à votre façon. Elle vous permet de profiter de votre audio en toute tranquillité, mais aussi d'interagir rapidement avec votre environnement lorsque vous en avez besoin. Associée à une connectivité Bluetooth 5.0 et à une autonomie de batterie de 17 heures, le casque XX99 Mark II vous offre un son supérieur, une technologie de pointe et une esthétique de design moderne.",
+
+  "zx7-speaker-feature1": "Bénéficiez des avantages d'un cône de tweeter à membrane plate. Cela offre un taux de réponse rapide et d'excellentes fréquences élevées que les enceintes bibliothèque de niveau inférieur ne peuvent pas fournir. Les haut-parleurs de graves sont fabriqués en aluminium, ce qui produit un son unique et clair. Les entrées XLR vous permettent de vous connecter à une table de mixage pour une utilisation plus avancée.",
+  "zx7-speaker-feature2": "Le haut-parleur ZX7 est le parfait mélange entre design élégant et performances élevées. Il est doté d'une enceinte en bois MDF encapsulée qui minimise la résonance acoustique. La double connectivité permet de jumeler via Bluetooth ou par les entrées optiques et RCA traditionnelles. Changez de source d'entrée et contrôlez le volume du bout des doigts grâce à la télécommande sans fil incluse. Ce haut-parleur polyvalent est équipé pour offrir une expérience d'écoute authentique.",
+
+  "zx9-speaker-feature1": "Connectez-vous via Bluetooth ou presque toutes les sources câblées. Ce haut-parleur dispose d'entrées optiques, coaxiales numériques, USB de type B, RCA stéréo et XLR stéréo, vous permettant de connecter jusqu'à cinq appareils sources câblés pour un commutation facile. La technologie Bluetooth améliorée offre une qualité audio quasi sans perte jusqu'à 328 pieds (100 mètres).",
+  "zx9-speaker-feature2": "Découvrez des aigus clairs et plus naturels que ceux de la concurrence grâce au tweeter à membrane plane signature du ZX9. Tout aussi important est son puissant basses qui secoue la pièce, grâce à une unité de basses en alliage d'aluminium de 6,5 pouces. Vous pourrez profiter d'une qualité sonore équivalente que ce soit dans une grande pièce ou un petit salon. De plus, vous vivrez de nouvelles sensations avec de vieilles chansons car il peut répondre même aux formes d'ondes les plus subtiles.",
+
+  "Billing-Details": "Détails de facturation",
+  "Name": "Nom",
+  "Email-Address": "Adresse e-mail",
+  "Phone-Number": "Numéro de téléphone",
+  "shipping-info": "Details de livraison",
+  "Address": "Addresse",
+  "ZIP-Code": "Code postal",
+  "City": "Ville",
+  "Country": "Pays",
+  "payment-details": "Détails de paiement",
+  "Payment-Method": "Méthode de paiement",
+  "Cash-on-Delivery": "Paiement à la livraison",
+  "The-Cash": "L'option <<Paiement à la livraison>> vous permet de payer en espèces lorsque notre livreur arrive à votre domicile. Assurez-vous simplement que votre adresse est correcte pour que votre commande ne soit pas annulée.",
+  "summary": "Résumé",
+  "SHIPPING": "Livraison",
+  "GRAND-TOTAL": "TOTAL GÉNÉRAL",
+  "THANK-YOU": "MERCI",
+  "FOR-YOUR-ORDER": "POUR VOTRE COMMANDE",
+  "email confirmation": "Vous recevrez bientôt une confirmation par e-mail.",
+  "BACK-TO-HOME": "RETOUR À LA PAGE D'ACCUEIL"
+}

@@ -1,0 +1,28 @@
+@import "../../utils/variables";
+
+.scroll-top-button {
+  width: 40px;
+  height: 40px;
+
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+
+  border-radius: 4px;
+  //   background-color: rgba(0, 0, 0, 0.3);
+  background-color: $primary-color-light;
+  opacity: 1;
+  cursor: pointer;
+  z-index: 2;
+
+  transition: opacity 0.5s, background 0.3s;
+
+  mat-icon {
+    color: $white;
+  }
+
+  &.hidden {
+    pointer-events: none;
+    opacity: 0;
+  }
+}

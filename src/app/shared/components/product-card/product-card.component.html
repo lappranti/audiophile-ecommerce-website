@@ -1,0 +1,13 @@
+<div class="card">
+  <div class="card-cover" [ngStyle]="{
+      'background-image': 'url(' + product.image.desktop + ')'
+    }" [ngStyle.lt-md]="{
+      'background-image': 'url(' + product.image.tablet + ')'
+    }" [ngStyle.lt-sm]="{
+      'background-image': 'url(' + product.image.mobile + ')'
+    }"></div>
+  <div class="card-content" fxLayout="column" fxLayoutAlign="start center" fxLayoutGap="32px">
+    <h3 class="title5">{{ product.name }}</h3>
+    <a (click)="redirectToProductDetail(product.slug)" class="btn btn--1">{{'See-Product' | translate}}</a>
+  </div>
+</div>

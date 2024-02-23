@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="wrapper" fxLayout="column" fxLayoutGap="160px" fxLayoutGap.lt-md="120px">
+        <button class="body btn-gb" (click)="goBack()">Go Back</button>
+        <div fxFill fxLayout="column" fxLayoutGap="160px" fxLayoutGap.lt-md="120px" fxLayoutGap.lt-sm="88px">
+            <app-product-card-horizontal [data]="product"></app-product-card-horizontal>
+            <app-product-details
+                [data]="{ features: product.features, includes: product.includes }"></app-product-details>
+            <app-product-gallerie [data]="product.gallery"></app-product-gallerie>
+        </div>
+        <div fxLayout="column" fxLayoutAlign="start center" fxLayoutGap="64px" fxLayoutGap.lt-md="56px"
+            fxLayoutGap.lt-sm="40px">
+            <h3 class="title3" style="text-align: center; text-transform: uppercase">
+                {{'you-may-also-like' | translate}}
+            </h3>
+            <div fxFill fxLayout="row" fxLayoutAlign="space-between none" fxLayoutGap="30px" fxLayoutGap.lt-md="11px"
+                fxLayout.lt-sm="column" fxLayoutGap.lt-sm="56px">
+                <app-product-card *ngFor="let product of product.others" [product]="product"
+                    fxFlex="33"></app-product-card>
+            </div>
+        </div>
+        <app-categories fxFill></app-categories>
+        <app-audio-gear fxFill></app-audio-gear>
+    </div>
+</div>

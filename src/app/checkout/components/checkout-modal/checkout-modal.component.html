@@ -1,0 +1,39 @@
+<div class="modal" fxLayout="column" fxLayoutGap="45px">
+  <div fxLayout="column" fxLayoutGap="32px">
+    <div fxLayoutAlign="start start">
+      <span class="badge-checked" fxLayoutAlign="center center"><mat-icon>check</mat-icon></span>
+    </div>
+    <div fxLayout="column" fxLayoutGap="24px">
+      <span class="title-modal" fxLayout="column"><span>{{'THANK-YOU' | translate}}</span><span>{{'FOR-YOUR-ORDER' |
+          translate}}</span></span>
+      <span class="body body--descrption">{{'email confirmation' | translate}}</span>
+    </div>
+    <div fxLayout="row">
+      <div fxFlex="60" fxLayout="column" fxLayoutGap="12px" class="resum-checkout">
+        <div fxLayout="row" fxLayoutAlign="space-between start">
+          <div fxLayout="row" fxLayoutGap="16px" fxLayout.lt-sm="column" fxLayoutGap.lt-sm="0">
+            <div class="img-product" [ngStyle]="{ 'background-image': 'url(' + data.prod.img + ')' }"></div>
+            <div fxLayout="column">
+              <span class="body body--bold text-on-1-line">{{data.prod.name}}</span>
+              <span class="price">$ {{data.prod.nbr * data.prod.price | number : "1.0-0"}}</span>
+            </div>
+          </div>
+          <span class="body body--bold body--bold--grey">x {{data.prod.nbr}}</span>
+        </div>
+        <div class="separateur"></div>
+        <div fxLayoutAlign="center start">
+          <span class="other-item text-on-1-line" *ngIf="data.nbr!==0">and {{data.nbr}} other item(s)</span>
+        </div>
+      </div>
+      <div fxFlex="40" fxLayoutAlign="start center" class="grand-total">
+        <div fxLayout="column" fxLayoutGap="8px">
+          <span class="body body--grand-total">TOTAL</span><span class="price-total">$ {{data.gT | number :
+            "1.0-0"}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <a (click)="onNoClick()" class="btn btn--1" style="width: 100%">{{"BACK-TO-HOME" | translate}}</a>
+  </div>
+</div>

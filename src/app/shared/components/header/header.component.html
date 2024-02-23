@@ -1,0 +1,110 @@
+<div class="container">
+  <div class="wrapper header" fxLayout="row" fxLayoutAlign="space-between center" fxLayoutAlign.sm="start center"
+    fxLayoutGap.sm="42px">
+    <div class="btn-humburger" fxHide fxShow.lt-md (click)="toggleMenuMobile()" #toggleMenuButton>
+      <mat-icon fxLayoutAlign="start center">menu</mat-icon>
+    </div>
+    <div class="logo" fxLayoutAlign="start center">
+      <img (click)="gotoHome()" fxLayoutAlign="start center" src="../../../../assets/shared/desktop/logo.svg" alt="" />
+    </div>
+    <nav fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="34px" fxHide.lt-md="">
+      <a class="link-item subtitle" routerLinkActive="active" *ngFor="let link of linkList" [routerLink]="link.path">{{
+        link.label | translate }}</a>
+    </nav>
+    <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="40px" fxLayoutGap.lt-sm="24px" fxFlex.sm="100"
+      fxLayoutAlign.lt-md="end center">
+      <div fxHide.lt-sm fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="12px" fxLayoutGap.lt-sm="8px">
+        <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="4px">
+          <span>{{currentLang | uppercase}}</span>
+          <mat-icon fxLayoutAlign="start center">public</mat-icon>
+        </div>
+        <div class="dropdown" appDropdown="dropdown-lang">
+          <mat-icon fxLayoutAlign="start center">keyboard_arrow_down</mat-icon>
+          <div class="dropdown-content" id="dropdown-lang" fxLayout="column" fxLayoutAlign="start start">
+            <div class="dropdown-option" (click)="switchLanguage('en')">EN</div>
+            <div class="dropdown-option" (click)="switchLanguage('fr')">FR</div>
+          </div>
+        </div>
+      </div>
+      <div class="icon-cart-container">
+        <span #toggleCartButton>
+          <mat-icon fxLayoutAlign="start center" (click)="toggleCartModal()">shopping_cart</mat-icon>
+        </span>
+        <span class="no-empty-cart" *ngIf="cartList.length > 0"></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal menu mobile -->
+<div class="modal-sidebar" [ngClass]="showModal ? 'is-show' : ''">
+  <div #modalContent class="modal-contant" fxLayout="column" fxLayoutGap="40px">
+    <nav fxLayout="column" fxLayoutAlign="start none" fxLayoutGap="32px">
+      <a class="link-item subtitle" routerLinkActive="active" *ngFor="let link of linkList" [routerLink]="link.path"
+        fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="16px" #toggleMenuButton
+        (click)="showModal = !showModal"><mat-icon fxLayoutAlign="center center">{{ link.icon }}</mat-icon><span>{{
+          link.label | translate }}</span></a>
+    </nav>
+    <div fxHide fxShow.lt-sm fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="12px" fxLayoutGap.lt-sm="12px">
+      <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="8px">
+        <span>{{currentLang | uppercase}}</span>
+        <mat-icon fxLayoutAlign="start center">public</mat-icon>
+      </div>
+      <div class="dropdown" appDropdown="dropdown-lang">
+        <mat-icon fxLayoutAlign="start center">keyboard_arrow_down</mat-icon>
+        <div class="dropdown-content" id="dropdown-lang" fxLayout="column" fxLayoutAlign="start start">
+          <div class="dropdown-option">EN</div>
+          <div class="dropdown-option">FR</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Cart -->
+
+<div class="modal-cart" *ngIf="showCartModal" fxLayout="row" fxLayoutAlign="end start">
+  <div class="cart" fxLayout="column" fxLayoutGap="32px" #modalCartContent>
+    <div fxLayout="row" fxLayoutAlign="space-between center">
+      <h4 class="cart-title">{{"cart" | translate }} ({{cartList.length}})</h4>
+      <span class="body btn-clear" (click)="clearCart()">{{'remove-all' | translate }}</span>
+    </div>
+    <div fxLayout="column" fxLayoutGap="24px">
+      <div fxLayout="row" fxLayoutAlign="space-between center" class="product" *ngFor="let prod of cartList">
+        <div fxLayout="row" fxLayoutGap="16px">
+          <div class="img-prod" [ngStyle]="{ 'background-image': 'url(' + prod.img + ')' }"></div>
+          <div fxLayout="column" fxLayoutAlign="center start">
+            <span class="body" style="font-weight: 700; color: #000">{{
+              prod.name.split(" ")[0]
+              }}</span>
+            <span fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="4px"><span class="prod-price">{{
+                prod.price | number : "1.0-0"
+                }}</span>
+              <mat-icon fxLayoutAlign="center center">euro_symbol</mat-icon></span>
+          </div>
+        </div>
+        <div>
+          <button class="btn btn--4">
+            <span (click)="removeProduct(prod)">-</span><span>{{ prod.nbr }}</span><span
+              (click)="addProduct(prod)">+</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div fxLayout="column" fxLayoutGap="24px">
+      <div fxLayout="row" fxLayoutAlign="space-between center">
+        <span class="body">TOTAL</span>
+        <span fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="4px">
+          <span class="cart-title">{{
+            totalPriceItem | number : "1.0-0"
+            }}</span>
+          <mat-icon fxLayoutAlign="center center">euro_symbol</mat-icon>
+        </span>
+      </div>
+      <button [disabled]="cartList.length==0" class="btn btn--1" style="width: 100% !important" routerLink="checkout"
+        (click)="toggleCartModal()">
+        {{"checkout" | translate}}
+      </button>
+    </div>
+  </div>
+</div>

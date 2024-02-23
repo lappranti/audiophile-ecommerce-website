@@ -1,0 +1,31 @@
+<div class="container" fxFlex="100" fxLayout="row" fxLayout.lt-sm="column">
+  <div class="image" fxFlex.gt-sm="50" fxFlex.sm="45" [ngStyle]="{
+      'background-image': 'url(' + data.categoryImage.desktop + ')'
+    }" [ngStyle.lt-sm]="{
+      'background-image': 'url(' + data.categoryImage.mobile + ')'
+    }"></div>
+  <div class="text" fxFlex.gt-sm="50" fxFlex.sm="55" fxLayout="row" fxLayoutAlign="end center"
+    fxLayoutAlign.lt-sm="center start">
+    <div class="text-content" fxLayout="column" fxLayoutGap="32px" fxLayoutGap.lt-md="24px" fxLayoutAlign="start start">
+      <div fxLayout="column" fxLayoutGap="16px" fxLayoutGap.lt-sm="24px">
+        <span class="overline" *ngIf="data.new">{{'new-product' | translate }}</span>
+        <h2 class="title2">{{ data.name }}</h2>
+      </div>
+      <div class="body">
+        {{ data.description | translate }}
+      </div>
+      <div fxLayout="column" fxLayoutGap="47px" fxLayoutGap.lt-md="32px">
+        <span fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="5px"><span class="price-product">{{
+            data.price | number : "1.0-0"
+            }}</span>
+          <mat-icon fxLayoutAlign="center center">euro_symbol</mat-icon></span>
+        <div class="btn-actions" fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="16px">
+          <button class="btn btn--4">
+            <span (click)="removeProduct()">-</span><span>{{ nbrArticle }}</span><span (click)="addProduct()">+</span>
+          </button>
+          <button class="btn btn--1" (click)="addToCart()">{{'add-to-cart' | translate}}</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

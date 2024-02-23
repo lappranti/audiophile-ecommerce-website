@@ -1,0 +1,56 @@
+@import "../../utils/variables";
+
+.image {
+  height: 560px;
+  border-radius: 8px;
+  background: #f1f1f1;
+
+  background-image: url("../../../../assets/product-xx59-headphones/desktop/image-category-page-preview.jpg");
+  //   background: url(<path-to-image>), lightgray 0px 0px / 100% 100% no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @media only screen and (max-width: 960px) {
+    height: 352px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  @media only screen and (max-width: 600px) {
+    height: 327px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+.text {
+  .text-content {
+    max-width: 445px;
+  }
+  .overline {
+    color: $primary-color;
+  }
+  .body {
+    color: #00000050;
+  }
+
+  @media only screen and (max-width: 960px) {
+    .text-content {
+      max-width: none;
+      padding: 52px 58px 0;
+    }
+
+    .overline,
+    .title2,
+    .body {
+      text-align: center;
+    }
+  }
+  @media only screen and (max-width: 600px) {
+    .text-content {
+      padding: 32px 0 0;
+    }
+  }
+}

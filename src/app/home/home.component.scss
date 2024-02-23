@@ -1,0 +1,261 @@
+@import "../shared/utils/variables";
+
+.wrapper {
+  margin: 0 auto;
+  @media (min-width: 1440px) {
+    max-width: 1328px;
+  }
+  @media (min-width: 1920px) {
+    max-width: 1520px;
+  }
+}
+
+.baniere-home {
+  background: #0e0e0e;
+  padding: 0 5%;
+  transition: padding 0.4s ease-in-out;
+  position: relative;
+
+  background: url("../../assets/home/desktop/image-hero.jpg"),
+    lightgray 0px 0px / 100% 100% no-repeat;
+
+  background-position: right;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @media only screen and (max-width: 960px) {
+    background-image: none;
+
+    .subtitle-baniere,
+    .title-baniere,
+    .description-baniere {
+      text-align: center;
+    }
+  }
+
+  .text-container-baniere {
+    max-width: 398px;
+    width: 100%;
+    height: 536px;
+    z-index: 3;
+
+    @media only screen and (max-width: 450px) {
+      height: 523px;
+    }
+  }
+
+  .subtitle-baniere {
+    text-transform: uppercase;
+    color: #ffffff49;
+  }
+
+  .title-baniere {
+    color: #fff;
+    text-transform: uppercase;
+
+    @media only screen and (max-width: 600px) {
+      font-size: 36px;
+      line-height: 40px; /* 111.111% */
+      letter-spacing: 1.286px;
+    }
+  }
+
+  .description-baniere {
+    color: #ffffff75;
+    @media only screen and (max-width: 600px) {
+      margin-top: 8px;
+    }
+  }
+
+  .see-product-baniere {
+    margin-top: 16px;
+    @media only screen and (max-width: 600px) {
+      margin-top: 12px;
+    }
+  }
+
+  .cover-baniere {
+    @media only screen and (max-width: 960px) {
+      background: url("../../assets/home/tablet/image-header.jpg"),
+        lightgray 0px 0px / 100% 100% no-repeat;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: 2;
+    }
+    @media only screen and (max-width: 600px) {
+      background-image: url("../../assets/home/mobile/image-header.jpg");
+    }
+  }
+}
+
+.main-content {
+  background: $light;
+  padding: 120px 5% 200px;
+
+  @media only screen and (max-width: 960px) {
+    padding: 96px 5%;
+  }
+  @media only screen and (max-width: 600px) {
+    padding: 40px 5% 120px;
+  }
+}
+
+// products-container
+.products-container {
+  .speaker-zx9 {
+    overflow-y: hidden;
+    height: 560px;
+    background: #d87d4a;
+    border-radius: 8px;
+
+    background-image: url("../../assets/home/desktop/pattern-circles.svg");
+    background-position: left top;
+    background-size: auto;
+    background-repeat: no-repeat;
+
+    .image-speaker-zx9 {
+      width: 410px;
+      margin-bottom: -90px;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .description-speaker-zx9 {
+      .title1 {
+        color: #fff;
+      }
+
+      .body {
+        color: #ffffff75;
+      }
+
+      .btn {
+        background: #000;
+        color: #fff;
+
+        &:hover {
+          background: #4c4c4c;
+          cursor: pointer;
+        }
+      }
+    }
+
+    @media only screen and (max-width: 960px) {
+      height: 720px;
+      padding: 52px 0 64px;
+
+      background-size: contain;
+      background-position: top center;
+
+      .image-speaker-zx9 {
+        width: 197.212px;
+        margin-bottom: 0;
+      }
+
+      .description-speaker-zx9 {
+        .body {
+          max-width: 350px;
+          text-align: center;
+        }
+      }
+    }
+    @media only screen and (max-width: 960px) {
+      height: 600px;
+      padding: 55px 0;
+
+      .description-speaker-zx9 {
+        .title1 {
+          font-size: 36px;
+          line-height: 40px; /* 111.111% */
+          letter-spacing: 1.286px;
+        }
+      }
+    }
+  }
+
+  .speaker-zx7 {
+    height: 320px;
+    padding-left: 96.5px;
+
+    border-radius: 8px;
+    background: url("../../assets/home/desktop/image-speaker-zx7.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    @media only screen and (max-width: 960px) {
+      padding-left: 63.75px;
+      background: url("../../assets/home/tablet/image-speaker-zx7.jpg"),
+        lightgray 0px 0px / 100% 100% no-repeat;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    @media only screen and (max-width: 600px) {
+      padding-left: 24px;
+
+      background: url("../../assets/home/mobile/image-speaker-zx7.jpg"),
+        lightgray 0px 0px / 100% 100% no-repeat;
+      background-size: cover;
+      background-position: right;
+    }
+  }
+
+  // earphones-yx1
+  .earphones-yx1 {
+    height: 320px;
+
+    .image-earphones-yx1 {
+      border-radius: 8px;
+      background: url("../../assets/home/desktop/image-earphones-yx1.jpg"),
+        lightgray 0px 0px / 100% 100% no-repeat;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+
+      @media only screen and (max-width: 960px) {
+        background: url("../../assets/home/tablet/image-earphones-yx1.jpg"),
+          lightgray 0px 0px / 100% 100% no-repeat;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+      @media only screen and (max-width: 600px) {
+        background: url("../../assets/home/mobile/image-earphones-yx1.jpg"),
+          lightgray 0px 0px / 100% 100% no-repeat;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+    }
+
+    .description-earphones-yx1 {
+      padding-left: 95px;
+      border-radius: 8px;
+      background: #f1f1f1;
+
+      @media only screen and (max-width: 960px) {
+        padding-left: 40px;
+      }
+      @media only screen and (max-width: 600px) {
+        padding-left: 24px;
+      }
+    }
+
+    @media only screen and (max-width: 600px) {
+      height: auto;
+      .image-earphones-yx1,
+      .description-earphones-yx1 {
+        height: 200px;
+      }
+    }
+  }
+}

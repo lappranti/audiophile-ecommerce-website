@@ -1,0 +1,32 @@
+@import "../../utils/variables";
+
+.container {
+  background: #000;
+  outline: 1px solid #0e0e0e;
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 98px 0;
+
+  .title2 {
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  @media only screen and (max-width: 960px) {
+    padding-top: 105px;
+  }
+
+  @media only screen and (max-width: 600px) {
+    padding: 32px;
+
+    .title2 {
+      font-size: 28px;
+      letter-spacing: 2px;
+    }
+  }
+}

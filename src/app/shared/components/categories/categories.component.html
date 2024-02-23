@@ -1,0 +1,18 @@
+<div
+  class="all-category-container"
+  fxFlex="100"
+  fxLayout="row"
+  fxLayout.lt-sm="column"
+  fxLayoutAlign.lt-sm="center center"
+  fxLayoutGap="30px"
+  fxLayoutAlign="space-between start"
+  fxLayoutGap.lt-sm="120px"
+>
+  <app-card-shop
+    *ngFor="let card of cardShopList"
+    [card]="card"
+    [routerLink]="'/' + card.title"
+    fxFlex="33"
+    fxFill
+  ></app-card-shop>
+</div>

@@ -1,0 +1,32 @@
+@import "../../utils/variables";
+
+.features {
+  max-width: 635px;
+  width: 100%;
+}
+
+.includes {
+  min-width: 230px;
+}
+
+.title3 {
+  text-transform: uppercase;
+}
+
+.text-yellow {
+  color: $primary-color;
+  font-weight: 700;
+}
+
+@media only screen and (max-width: 960px) {
+  .features {
+    max-width: none;
+    width: 100%;
+  }
+
+  .includes {
+    min-width: none;
+    max-width: 560px;
+    width: 100%;
+  }
+}

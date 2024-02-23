@@ -1,0 +1,26 @@
+@import "../../utils/variables";
+
+.card {
+  .card-cover {
+    height: 318px;
+    border-radius: 8px;
+    background: #f1f1f1;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .card-content {
+    padding-top: 40px;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .card-cover {
+      height: 180px;
+    }
+    .card-content {
+      padding-top: 32px;
+    }
+  }
+}

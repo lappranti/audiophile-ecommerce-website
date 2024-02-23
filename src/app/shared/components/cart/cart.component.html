@@ -1,0 +1,45 @@
+<div class="container">
+  <div class="wrapper" fxLayout="row" fxLayoutAlign="end start">
+    <div class="cart" fxLayout="column" fxLayoutGap="32px" #modalContent>
+      <div fxLayout="row" fxLayoutAlign="space-between center">
+        <h4 class="cart-title">cart (3)</h4>
+        <span class="body btn-clear" (click)="clearCart()">Remove all</span>
+      </div>
+      <div fxLayout="column" fxLayoutGap="24px">
+        <div fxLayout="row" fxLayoutAlign="space-between center" class="product" *ngFor="let prod of cartList">
+          <div fxLayout="row" fxLayoutGap="16px">
+            <div class="img-prod" [ngStyle]="{ 'background-image': 'url(' + prod.img + ')' }"></div>
+            <div fxLayout="column" fxLayoutAlign="center start">
+              <span class="body" style="font-weight: 700; color: #000">{{
+                prod.name.split(" ")[0]
+                }}</span>
+              <span fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="4px"><span class="prod-price">{{
+                  prod.price | number : "1.0-0"
+                  }}</span>
+                <mat-icon fxLayoutAlign="center center">euro_symbol</mat-icon></span>
+            </div>
+          </div>
+          <div>
+            <button class="btn btn--4">
+              <span (click)="removeProduct()">-</span><span>{{ prod.nbr }}</span><span (click)="addProduct()">+</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div fxLayout="column" fxLayoutGap="24px">
+        <div fxLayout="row" fxLayoutAlign="space-between center">
+          <span class="body">TOTAL</span>
+          <span fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="4px">
+            <span class="cart-title">{{
+              totalPriceItem | number : "1.0-0"
+              }}</span>
+            <mat-icon fxLayoutAlign="center center">euro_symbol</mat-icon>
+          </span>
+        </div>
+        <button *ngIf="cartList.length==0" class="btn btn--1" style="width: 100% !important" routerLink="checkout">
+          checkout
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
