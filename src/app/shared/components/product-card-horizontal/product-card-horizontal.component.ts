@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnChanges } from '@angular/core';
 import { CartService } from '../../services/cart.service';
 import { Cart } from '../../models/cart';
 
@@ -7,11 +7,15 @@ import { Cart } from '../../models/cart';
   templateUrl: './product-card-horizontal.component.html',
   styleUrls: ['./product-card-horizontal.component.scss'],
 })
-export class ProductCardHorizontalComponent {
+export class ProductCardHorizontalComponent implements OnChanges {
   nbrArticle: number = 1;
   @Input() data!: any;
 
   constructor(private cart: CartService) {}
+
+  ngOnChanges() {
+    this.nbrArticle = 1;
+  }
 
   addProduct() {
     if (this.nbrArticle < 10) {
