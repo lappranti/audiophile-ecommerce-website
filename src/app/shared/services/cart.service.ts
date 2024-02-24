@@ -43,8 +43,16 @@ export class CartService {
   }
 
   addToCart(item: Cart): void {
-    this.cartList.push(item);
-    this.updateLocalStorage();
+    const existingItem = this.cartList.find(
+      (cartItem) => cartItem.id === item.id
+    );
+
+    if (existingItem) {
+      this.updateCart(item);
+    } else {
+      this.cartList.push(item);
+      this.updateLocalStorage();
+    }
   }
 
   removeFromCart(item: Cart): void {
