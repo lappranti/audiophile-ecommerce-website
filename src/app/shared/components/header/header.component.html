@@ -53,8 +53,8 @@
       <div class="dropdown" appDropdown="dropdown-lang">
         <mat-icon fxLayoutAlign="start center">keyboard_arrow_down</mat-icon>
         <div class="dropdown-content" id="dropdown-lang" fxLayout="column" fxLayoutAlign="start start">
-          <div class="dropdown-option">EN</div>
-          <div class="dropdown-option">FR</div>
+          <div class="dropdown-option" (click)="switchLanguage('en')">EN</div>
+          <div class="dropdown-option" (click)="switchLanguage('fr')">FR</div>
         </div>
       </div>
     </div>
