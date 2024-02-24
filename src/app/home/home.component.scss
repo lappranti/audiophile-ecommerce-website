@@ -2,9 +2,11 @@
 
 .wrapper {
   margin: 0 auto;
+
   @media (min-width: 1440px) {
     max-width: 1328px;
   }
+
   @media (min-width: 1920px) {
     max-width: 1520px;
   }
@@ -55,13 +57,15 @@
 
     @media only screen and (max-width: 600px) {
       font-size: 36px;
-      line-height: 40px; /* 111.111% */
+      line-height: 40px;
+      /* 111.111% */
       letter-spacing: 1.286px;
     }
   }
 
   .description-baniere {
     color: #ffffff75;
+
     @media only screen and (max-width: 600px) {
       margin-top: 8px;
     }
@@ -69,6 +73,7 @@
 
   .see-product-baniere {
     margin-top: 16px;
+
     @media only screen and (max-width: 600px) {
       margin-top: 12px;
     }
@@ -89,6 +94,7 @@
       bottom: 0;
       z-index: 2;
     }
+
     @media only screen and (max-width: 600px) {
       background-image: url("../../assets/home/mobile/image-header.jpg");
     }
@@ -102,6 +108,7 @@
   @media only screen and (max-width: 960px) {
     padding: 96px 5%;
   }
+
   @media only screen and (max-width: 600px) {
     padding: 40px 5% 120px;
   }
@@ -168,14 +175,18 @@
         }
       }
     }
+
     @media only screen and (max-width: 960px) {
-      height: 600px;
+      height: auto;
       padding: 55px 0;
 
       .description-speaker-zx9 {
+        padding: 0 24px 0;
+
         .title1 {
           font-size: 36px;
-          line-height: 40px; /* 111.111% */
+          line-height: 40px;
+          /* 111.111% */
           letter-spacing: 1.286px;
         }
       }
@@ -199,6 +210,7 @@
       background-repeat: no-repeat;
       background-size: cover;
     }
+
     @media only screen and (max-width: 600px) {
       padding-left: 24px;
 
@@ -228,6 +240,7 @@
         background-size: cover;
         background-position: center;
       }
+
       @media only screen and (max-width: 600px) {
         background: url("../../assets/home/mobile/image-earphones-yx1.jpg"),
           lightgray 0px 0px / 100% 100% no-repeat;
@@ -245,6 +258,7 @@
       @media only screen and (max-width: 960px) {
         padding-left: 40px;
       }
+
       @media only screen and (max-width: 600px) {
         padding-left: 24px;
       }
@@ -252,6 +266,7 @@
 
     @media only screen and (max-width: 600px) {
       height: auto;
+
       .image-earphones-yx1,
       .description-earphones-yx1 {
         height: 200px;
